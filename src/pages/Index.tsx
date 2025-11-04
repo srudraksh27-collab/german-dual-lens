@@ -1,13 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import SplitSection from "@/components/SplitSection";
+import CultureSection from "@/components/CultureSection";
+import HousingSection from "@/components/HousingSection";
+import SocialTensionsSection from "@/components/SocialTensionsSection";
+import QuoteSection from "@/components/QuoteSection";
+import DiversitySection from "@/components/DiversitySection";
+import YouthSection from "@/components/YouthSection";
+import ConclusionSection from "@/components/ConclusionSection";
 
 const Index = () => {
+  const povertyQuotes = [
+    "I stay under a blanket to keep warm.",
+    "It tears you apart.",
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Hero />
+      <SplitSection />
+      <CultureSection />
+      <HousingSection />
+      <SocialTensionsSection />
+      <QuoteSection 
+        title="Poverty & Hardship"
+        quotes={povertyQuotes}
+        variant="dark"
+      />
+      <DiversitySection />
+      <YouthSection />
+      <ConclusionSection />
+    </main>
   );
 };
 
